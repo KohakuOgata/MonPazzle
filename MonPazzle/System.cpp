@@ -1,6 +1,10 @@
 #include "System.h"
 #include <DxLib.h>
 
+namespace Time {
+	void Update();
+}
+
 bool System::Initialize()
 {
 	//ウィンドウがノンアクティブ時に実行を続けるか
@@ -36,6 +40,7 @@ void System::Loop()
 		bool terminate = false;
 		terminate |= static_cast<bool>(ClearDrawScreen());
 		terminate |= static_cast<bool>(clsDx());
+		Time::Update();
 		terminate |= static_cast<bool>(ScreenFlip());
 		terminate |= static_cast<bool>(ProcessMessage());
 		if (terminate)
