@@ -1,4 +1,5 @@
 #pragma once
+#define SYSTEM_H
 
 namespace System {
 	bool Initialize();

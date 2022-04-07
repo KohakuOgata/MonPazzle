@@ -1,5 +1,6 @@
 #include "System.h"
 #include <DxLib.h>
+#include "SceneManager.h"
 
 namespace Time {
 	void Update();
@@ -31,6 +32,7 @@ bool System::Initialize()
 		return false;
 	}
 	SetDrawScreen(DX_SCREEN_BACK);
+	SceneManager::Init();
 	return true;
 }
 
@@ -41,6 +43,8 @@ void System::Loop()
 		terminate |= static_cast<bool>(ClearDrawScreen());
 		terminate |= static_cast<bool>(clsDx());
 		Time::Update();
+		terminate |= SceneManager::Update();
+		SceneManager::Draw();
 		terminate |= static_cast<bool>(ScreenFlip());
 		terminate |= static_cast<bool>(ProcessMessage());
 		if (terminate)
