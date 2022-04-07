@@ -1,9 +1,6 @@
 #include "System.h"
 #include <DxLib.h>
-
-namespace Time {
-	void Update();
-}
+#include "Time.h"
 
 bool System::Initialize()
 {
