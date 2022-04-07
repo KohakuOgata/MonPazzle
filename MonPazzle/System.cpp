@@ -1,10 +1,7 @@
 #include "System.h"
 #include <DxLib.h>
+#include "Time.h"
 #include "SceneManager.h"
-
-namespace Time {
-	void Update();
-}
 
 bool System::Initialize()
 {
