@@ -1,7 +1,7 @@
 #pragma once
 
 namespace System {
-	bool Inidtialize();
+	bool Initialize();
 	void Loop();
 	void Finalize();
 }

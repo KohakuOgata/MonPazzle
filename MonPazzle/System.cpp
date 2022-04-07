@@ -1,7 +1,7 @@
 #include "System.h"
 #include <DxLib.h>
 
-bool System::Inidtialize()
+bool System::Initialize()
 {
 	//ウィンドウがノンアクティブ時に実行を続けるか
 	SetAlwaysRunFlag(TRUE);
